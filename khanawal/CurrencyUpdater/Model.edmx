@@ -1,0 +1,2217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="KhanawalModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="KhanawalModelStoreContainer">
+          <EntitySet Name="AdHocRequest" EntityType="KhanawalModel.Store.AdHocRequest" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AdHocRequestPickupLocation" EntityType="KhanawalModel.Store.AdHocRequestPickupLocation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AdHocRequestTasteMapping" EntityType="KhanawalModel.Store.AdHocRequestTasteMapping" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AdHocRequestUserMapping" EntityType="KhanawalModel.Store.AdHocRequestUserMapping" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cities" EntityType="KhanawalModel.Store.Cities" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Country" EntityType="KhanawalModel.Store.Country" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CuisineType" EntityType="KhanawalModel.Store.CuisineType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CurrencyType" EntityType="KhanawalModel.Store.CurrencyType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DeliveryType" EntityType="KhanawalModel.Store.DeliveryType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GeoIPCountry" EntityType="KhanawalModel.Store.GeoIPCountry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ingredients" EntityType="KhanawalModel.Store.Ingredients" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Languages" EntityType="KhanawalModel.Store.Languages" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LisitngReviews" EntityType="KhanawalModel.Store.LisitngReviews" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Listing" EntityType="KhanawalModel.Store.Listing" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ListingAwards" EntityType="KhanawalModel.Store.ListingAwards" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ListingIngredients" EntityType="KhanawalModel.Store.ListingIngredients" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ListingPictures" EntityType="KhanawalModel.Store.ListingPictures" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ListingRating" EntityType="KhanawalModel.Store.ListingRating" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ListingRequest" EntityType="KhanawalModel.Store.ListingRequest" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ListingTriedByUser" EntityType="KhanawalModel.Store.ListingTriedByUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Localization" EntityType="KhanawalModel.Store.Localization" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MainMessage" EntityType="KhanawalModel.Store.MainMessage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MessageThread" EntityType="KhanawalModel.Store.MessageThread" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RecipeType" EntityType="KhanawalModel.Store.RecipeType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SideListingMapping" EntityType="KhanawalModel.Store.SideListingMapping" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SideListings" EntityType="KhanawalModel.Store.SideListings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="States" EntityType="KhanawalModel.Store.States" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Taste" EntityType="KhanawalModel.Store.Taste" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="KhanawalModel.Store.User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserCalendar" EntityType="KhanawalModel.Store.UserCalendar" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserRecommendation" EntityType="KhanawalModel.Store.UserRecommendation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserWishList" EntityType="KhanawalModel.Store.UserWishList" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_AdHocRequest_User" Association="KhanawalModel.Store.FK_AdHocRequest_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="AdHocRequest" EntitySet="AdHocRequest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdHocRequestPickupLocation_AdHocRequest" Association="KhanawalModel.Store.FK_AdHocRequestPickupLocation_AdHocRequest">
+            <End Role="AdHocRequest" EntitySet="AdHocRequest" />
+            <End Role="AdHocRequestPickupLocation" EntitySet="AdHocRequestPickupLocation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdHocRequestTasteMapping_AdHocRequest" Association="KhanawalModel.Store.FK_AdHocRequestTasteMapping_AdHocRequest">
+            <End Role="AdHocRequest" EntitySet="AdHocRequest" />
+            <End Role="AdHocRequestTasteMapping" EntitySet="AdHocRequestTasteMapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdHocRequestTasteMapping_Taste" Association="KhanawalModel.Store.FK_AdHocRequestTasteMapping_Taste">
+            <End Role="Taste" EntitySet="Taste" />
+            <End Role="AdHocRequestTasteMapping" EntitySet="AdHocRequestTasteMapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdHocRequestUserMapping_AdHocRequest" Association="KhanawalModel.Store.FK_AdHocRequestUserMapping_AdHocRequest">
+            <End Role="AdHocRequest" EntitySet="AdHocRequest" />
+            <End Role="AdHocRequestUserMapping" EntitySet="AdHocRequestUserMapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdHocRequestUserMapping_User" Association="KhanawalModel.Store.FK_AdHocRequestUserMapping_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="AdHocRequestUserMapping" EntitySet="AdHocRequestUserMapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cities_States" Association="KhanawalModel.Store.FK_Cities_States">
+            <End Role="States" EntitySet="States" />
+            <End Role="Cities" EntitySet="Cities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Country_CurrencyType" Association="KhanawalModel.Store.FK_Country_CurrencyType">
+            <End Role="CurrencyType" EntitySet="CurrencyType" />
+            <End Role="Country" EntitySet="Country" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GeoIPCountry_Country" Association="KhanawalModel.Store.FK_GeoIPCountry_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="GeoIPCountry" EntitySet="GeoIPCountry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LisitngReviews_Listing" Association="KhanawalModel.Store.FK_LisitngReviews_Listing">
+            <End Role="Listing" EntitySet="Listing" />
+            <End Role="LisitngReviews" EntitySet="LisitngReviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LisitngReviews_User" Association="KhanawalModel.Store.FK_LisitngReviews_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="LisitngReviews" EntitySet="LisitngReviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Listing_CuisineType" Association="KhanawalModel.Store.FK_Listing_CuisineType">
+            <End Role="CuisineType" EntitySet="CuisineType" />
+            <End Role="Listing" EntitySet="Listing" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Listing_CurrencyType" Association="KhanawalModel.Store.FK_Listing_CurrencyType">
+            <End Role="CurrencyType" EntitySet="CurrencyType" />
+            <End Role="Listing" EntitySet="Listing" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Listing_RecipeType" Association="KhanawalModel.Store.FK_Listing_RecipeType">
+            <End Role="RecipeType" EntitySet="RecipeType" />
+            <End Role="Listing" EntitySet="Listing" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Listing_Taste" Association="KhanawalModel.Store.FK_Listing_Taste">
+            <End Role="Taste" EntitySet="Taste" />
+            <End Role="Listing" EntitySet="Listing" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Listing_User" Association="KhanawalModel.Store.FK_Listing_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Listing" EntitySet="Listing" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingAwards_Listing" Association="KhanawalModel.Store.FK_ListingAwards_Listing">
+            <End Role="Listing" EntitySet="Listing" />
+            <End Role="ListingAwards" EntitySet="ListingAwards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingIngredients_Ingredients" Association="KhanawalModel.Store.FK_ListingIngredients_Ingredients">
+            <End Role="Ingredients" EntitySet="Ingredients" />
+            <End Role="ListingIngredients" EntitySet="ListingIngredients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingIngredients_Listing" Association="KhanawalModel.Store.FK_ListingIngredients_Listing">
+            <End Role="Listing" EntitySet="Listing" />
+            <End Role="ListingIngredients" EntitySet="ListingIngredients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingPictures_Listing" Association="KhanawalModel.Store.FK_ListingPictures_Listing">
+            <End Role="Listing" EntitySet="Listing" />
+            <End Role="ListingPictures" EntitySet="ListingPictures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingRating_Listing" Association="KhanawalModel.Store.FK_ListingRating_Listing">
+            <End Role="Listing" EntitySet="Listing" />
+            <End Role="ListingRating" EntitySet="ListingRating" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingRequest_Listing" Association="KhanawalModel.Store.FK_ListingRequest_Listing">
+            <End Role="Listing" EntitySet="Listing" />
+            <End Role="ListingRequest" EntitySet="ListingRequest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingRequest_User" Association="KhanawalModel.Store.FK_ListingRequest_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="ListingRequest" EntitySet="ListingRequest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingTriedByUser_Listing" Association="KhanawalModel.Store.FK_ListingTriedByUser_Listing">
+            <End Role="Listing" EntitySet="Listing" />
+            <End Role="ListingTriedByUser" EntitySet="ListingTriedByUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingTriedByUser_User" Association="KhanawalModel.Store.FK_ListingTriedByUser_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="ListingTriedByUser" EntitySet="ListingTriedByUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MainMessage_ListingRequest" Association="KhanawalModel.Store.FK_MainMessage_ListingRequest">
+            <End Role="ListingRequest" EntitySet="ListingRequest" />
+            <End Role="MainMessage" EntitySet="MainMessage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageThread_MainMessage" Association="KhanawalModel.Store.FK_MessageThread_MainMessage">
+            <End Role="MainMessage" EntitySet="MainMessage" />
+            <End Role="MessageThread" EntitySet="MessageThread" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageThread_User" Association="KhanawalModel.Store.FK_MessageThread_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="MessageThread" EntitySet="MessageThread" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageThread_User1" Association="KhanawalModel.Store.FK_MessageThread_User1">
+            <End Role="User" EntitySet="User" />
+            <End Role="MessageThread" EntitySet="MessageThread" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SideListingMapping_SideListings" Association="KhanawalModel.Store.FK_SideListingMapping_SideListings">
+            <End Role="SideListings" EntitySet="SideListings" />
+            <End Role="SideListingMapping" EntitySet="SideListingMapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SideListings_Listing" Association="KhanawalModel.Store.FK_SideListings_Listing">
+            <End Role="Listing" EntitySet="Listing" />
+            <End Role="SideListingMapping" EntitySet="SideListingMapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCalendar_Listing" Association="KhanawalModel.Store.FK_UserCalendar_Listing">
+            <End Role="Listing" EntitySet="Listing" />
+            <End Role="UserCalendar" EntitySet="UserCalendar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCalendar_User" Association="KhanawalModel.Store.FK_UserCalendar_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserCalendar" EntitySet="UserCalendar" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AdHocRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="SideDishesWanted" Type="varchar(max)" />
+          <Property Name="DeliveryTime" Type="datetime" Nullable="false" />
+          <Property Name="IngredientsToAvoide" Type="varchar(max)" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="IsVeg" Type="bit" />
+          <Property Name="IsNonVeg" Type="bit" />
+          <Property Name="Cost" Type="float" />
+          <Property Name="AdditionalInformaition" Type="varchar(max)" />
+          <Property Name="HomeDelivery" Type="bit" />
+        </EntityType>
+        <EntityType Name="AdHocRequestPickupLocation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="AddRessLine1" Type="varchar(max)" />
+          <Property Name="AddRessLine2" Type="varchar(max)" />
+          <Property Name="PinCode" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="City" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="State" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Country" Type="varchar" MaxLength="255" />
+          <Property Name="LandMark" Type="varchar(max)" />
+          <Property Name="AdHocRequestId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AdHocRequestTasteMapping">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RequestID" Type="int" Nullable="false" />
+          <Property Name="TasteID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AdHocRequestUserMapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AdhocRequestId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cities">
+          <Key>
+            <PropertyRef Name="city_id" />
+          </Key>
+          <Property Name="city_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="city_name" Type="varchar" MaxLength="100" />
+          <Property Name="StateId" Type="int" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Region" Type="varchar" MaxLength="255" />
+          <Property Name="CurrencyTypeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CuisineType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="CurrencyType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Value" Type="decimal" Precision="32" Scale="16" />
+        </EntityType>
+        <EntityType Name="DeliveryType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Description" Type="text" />
+        </EntityType>
+        <EntityType Name="GeoIPCountry">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IpFrom" Type="nvarchar" MaxLength="255" />
+          <Property Name="IpTo" Type="nvarchar" MaxLength="255" />
+          <Property Name="IpFromRange" Type="float" />
+          <Property Name="IpToRange" Type="float" />
+          <Property Name="CountryShortName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CountryName" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CountryID" Type="int" />
+        </EntityType>
+        <EntityType Name="Ingredients">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Validated" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="3000" />
+        </EntityType>
+        <EntityType Name="Languages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Language" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="LisitngReviews">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Review" Type="varchar(max)" Nullable="false" />
+          <Property Name="ListingID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="TasteRating" Type="int" />
+          <Property Name="QuantityRating" Type="int" />
+          <Property Name="VFMRating" Type="int" />
+          <Property Name="ServiceBehaviorRating" Type="int" />
+          <Property Name="OverAllRating" Type="int" />
+        </EntityType>
+        <EntityType Name="Listing">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="VegOrNonVeg" Type="bit" Nullable="false" />
+          <Property Name="TasteID" Type="int" />
+          <Property Name="RecipeTypeID" Type="int" />
+          <Property Name="CuisineTypeID" Type="int" />
+          <Property Name="Servings" Type="int" Nullable="false" />
+          <Property Name="Description" Type="varchar(max)" Nullable="false" />
+          <Property Name="Cost" Type="float" />
+          <Property Name="CurrencyTypeID" Type="int" />
+          <Property Name="FreeHomedelivery" Type="bit" />
+          <Property Name="HomedeliveryCharges" Type="int" />
+          <Property Name="HomeAddressAsPickUpLocation" Type="bit" Nullable="false" />
+          <Property Name="AddressLang" Type="float" />
+          <Property Name="AddressLat" Type="float" />
+          <Property Name="CancellationType" Type="int" />
+          <Property Name="Rating" Type="int" />
+          <Property Name="ConformaitonMessageRequired" Type="bit" Nullable="false" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="HomeDelivery" Type="bit" Nullable="false" />
+          <Property Name="SideDishProvided" Type="bit" Nullable="false" />
+          <Property Name="Validated" Type="bit" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="3000" />
+          <Property Name="Ingredients" Type="varchar(max)" />
+          <Property Name="AddressLine1" Type="varchar(max)" />
+          <Property Name="AddressLine2" Type="varchar(max)" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="50" />
+          <Property Name="UserCity" Type="int" />
+          <Property Name="UserState" Type="int" />
+          <Property Name="IsPostalStyleSeleted" Type="bit" />
+          <Property Name="MainIngredient" Type="varchar" MaxLength="255" />
+          <Property Name="FaceBookPostId" Type="varchar" MaxLength="255" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="SideListings" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="ListingAwards">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AwardID" Type="int" Nullable="false" />
+          <Property Name="ListingID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ListingIngredients">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IngredientId" Type="int" Nullable="false" />
+          <Property Name="ListingId" Type="int" Nullable="false" />
+          <Property Name="IsMainIngredient" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ListingPictures">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DisplayImageUrl" Type="varchar(max)" />
+          <Property Name="ListingID" Type="int" Nullable="false" />
+          <Property Name="ImageResolution" Type="varchar" MaxLength="50" />
+          <Property Name="FitForMainDisplaySlider" Type="bit" />
+          <Property Name="DisplayOrder" Type="int" />
+        </EntityType>
+        <EntityType Name="ListingRating">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ListingID" Type="int" Nullable="false" />
+          <Property Name="Rating" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ListingRequest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ListingID" Type="int" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="RequestedServings" Type="int" Nullable="false" />
+          <Property Name="RequestedDate" Type="datetime" Nullable="false" />
+          <Property Name="IsConfirmed" Type="bit" Nullable="false" />
+          <Property Name="RequestAccepted" Type="bit" Nullable="false" />
+          <Property Name="Message" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="ListingTriedByUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ListingID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Localization">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="language" Type="int" />
+          <Property Name="Description" Type="int" />
+        </EntityType>
+        <EntityType Name="MainMessage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="ListingRequestID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MessageThread">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Message" Type="varchar" MaxLength="500" />
+          <Property Name="UserMessage" Type="varchar" MaxLength="2000" />
+          <Property Name="MessageReadRequestor" Type="bit" Nullable="false" />
+          <Property Name="MainMessageID" Type="int" Nullable="false" />
+          <Property Name="FromUserID" Type="int" Nullable="false" />
+          <Property Name="ToUserID" Type="int" Nullable="false" />
+          <Property Name="MessageDate" Type="datetime" Nullable="false" />
+          <Property Name="IsFirstMessage" Type="bit" Nullable="false" />
+          <Property Name="ListingAccepted" Type="bit" />
+          <Property Name="MessageReadListingOwner" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RecipeType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Description" Type="text" />
+        </EntityType>
+        <EntityType Name="SideListingMapping">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ListingID" Type="int" Nullable="false" />
+          <Property Name="SideListingID" Type="int" Nullable="false" />
+          <Property Name="Validated" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SideListings">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Description" Type="text" />
+        </EntityType>
+        <EntityType Name="States">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Taste">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TasteDesc" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="varchar" MaxLength="200" />
+          <Property Name="ImageUrl" Type="varchar(max)" />
+          <Property Name="username" Type="varchar" MaxLength="200" />
+          <Property Name="first_name" Type="varchar" MaxLength="200" />
+          <Property Name="last_name" Type="varchar" MaxLength="200" />
+          <Property Name="fb_id" Type="varchar" MaxLength="100" />
+          <Property Name="gender" Type="char" MaxLength="6" />
+          <Property Name="UserType" Type="int" />
+          <Property Name="JoinedDate" Type="datetime" />
+          <Property Name="CityID" Type="int" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="200" />
+          <Property Name="AddressLang" Type="float" />
+          <Property Name="AddressLat" Type="float" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="BirthDate" Type="datetime" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+          <Property Name="CreateFacebookPost" Type="bit" />
+          <Property Name="ReceiveSMS" Type="bit" />
+          <Property Name="AddressLine1" Type="varchar(max)" />
+          <Property Name="AddressLine2" Type="varchar(max)" />
+          <Property Name="UserCity" Type="int" />
+          <Property Name="UserState" Type="int" />
+          <Property Name="IsPostalStyleSeleted" Type="bit" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="50" />
+          <Property Name="ServeAdHocRequest" Type="bit" />
+          <Property Name="ServeAdHocVeg" Type="bit" />
+          <Property Name="ServeAdHocNonVeg" Type="bit" />
+          <Property Name="PreferredCurrencyType" Type="varchar" MaxLength="10" />
+          <Property Name="AgreedTerms" Type="bit" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserCalendar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ListingId" Type="int" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="BusyDate" Type="datetime" Nullable="false" />
+          <Property Name="FirstHalf" Type="bit" />
+          <Property Name="SecondHalf" Type="bit" />
+        </EntityType>
+        <EntityType Name="UserRecommendation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="ListingID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserWishList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ListngID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_AdHocRequest_User">
+          <End Role="User" Type="KhanawalModel.Store.User" Multiplicity="0..1" />
+          <End Role="AdHocRequest" Type="KhanawalModel.Store.AdHocRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="AdHocRequest">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdHocRequestPickupLocation_AdHocRequest">
+          <End Role="AdHocRequest" Type="KhanawalModel.Store.AdHocRequest" Multiplicity="1" />
+          <End Role="AdHocRequestPickupLocation" Type="KhanawalModel.Store.AdHocRequestPickupLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AdHocRequest">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AdHocRequestPickupLocation">
+              <PropertyRef Name="AdHocRequestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdHocRequestTasteMapping_AdHocRequest">
+          <End Role="AdHocRequest" Type="KhanawalModel.Store.AdHocRequest" Multiplicity="1" />
+          <End Role="AdHocRequestTasteMapping" Type="KhanawalModel.Store.AdHocRequestTasteMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AdHocRequest">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AdHocRequestTasteMapping">
+              <PropertyRef Name="RequestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdHocRequestTasteMapping_Taste">
+          <End Role="Taste" Type="KhanawalModel.Store.Taste" Multiplicity="1" />
+          <End Role="AdHocRequestTasteMapping" Type="KhanawalModel.Store.AdHocRequestTasteMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Taste">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AdHocRequestTasteMapping">
+              <PropertyRef Name="TasteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdHocRequestUserMapping_AdHocRequest">
+          <End Role="AdHocRequest" Type="KhanawalModel.Store.AdHocRequest" Multiplicity="1" />
+          <End Role="AdHocRequestUserMapping" Type="KhanawalModel.Store.AdHocRequestUserMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AdHocRequest">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AdHocRequestUserMapping">
+              <PropertyRef Name="AdhocRequestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdHocRequestUserMapping_User">
+          <End Role="User" Type="KhanawalModel.Store.User" Multiplicity="1" />
+          <End Role="AdHocRequestUserMapping" Type="KhanawalModel.Store.AdHocRequestUserMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="AdHocRequestUserMapping">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cities_States">
+          <End Role="States" Type="KhanawalModel.Store.States" Multiplicity="0..1" />
+          <End Role="Cities" Type="KhanawalModel.Store.Cities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="States">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cities">
+              <PropertyRef Name="StateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Country_CurrencyType">
+          <End Role="CurrencyType" Type="KhanawalModel.Store.CurrencyType" Multiplicity="1" />
+          <End Role="Country" Type="KhanawalModel.Store.Country" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CurrencyType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Country">
+              <PropertyRef Name="CurrencyTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GeoIPCountry_Country">
+          <End Role="Country" Type="KhanawalModel.Store.Country" Multiplicity="0..1" />
+          <End Role="GeoIPCountry" Type="KhanawalModel.Store.GeoIPCountry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GeoIPCountry">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LisitngReviews_Listing">
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="1" />
+          <End Role="LisitngReviews" Type="KhanawalModel.Store.LisitngReviews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LisitngReviews">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LisitngReviews_User">
+          <End Role="User" Type="KhanawalModel.Store.User" Multiplicity="1" />
+          <End Role="LisitngReviews" Type="KhanawalModel.Store.LisitngReviews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="LisitngReviews">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Listing_CuisineType">
+          <End Role="CuisineType" Type="KhanawalModel.Store.CuisineType" Multiplicity="0..1" />
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CuisineType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Listing">
+              <PropertyRef Name="CuisineTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Listing_CurrencyType">
+          <End Role="CurrencyType" Type="KhanawalModel.Store.CurrencyType" Multiplicity="0..1" />
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CurrencyType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Listing">
+              <PropertyRef Name="CurrencyTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Listing_RecipeType">
+          <End Role="RecipeType" Type="KhanawalModel.Store.RecipeType" Multiplicity="0..1" />
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RecipeType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Listing">
+              <PropertyRef Name="RecipeTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Listing_Taste">
+          <End Role="Taste" Type="KhanawalModel.Store.Taste" Multiplicity="0..1" />
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Taste">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Listing">
+              <PropertyRef Name="TasteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Listing_User">
+          <End Role="User" Type="KhanawalModel.Store.User" Multiplicity="0..1" />
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Listing">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingAwards_Listing">
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="1" />
+          <End Role="ListingAwards" Type="KhanawalModel.Store.ListingAwards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingAwards">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingIngredients_Ingredients">
+          <End Role="Ingredients" Type="KhanawalModel.Store.Ingredients" Multiplicity="1" />
+          <End Role="ListingIngredients" Type="KhanawalModel.Store.ListingIngredients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ingredients">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingIngredients">
+              <PropertyRef Name="IngredientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingIngredients_Listing">
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="1" />
+          <End Role="ListingIngredients" Type="KhanawalModel.Store.ListingIngredients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingIngredients">
+              <PropertyRef Name="ListingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingPictures_Listing">
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="1" />
+          <End Role="ListingPictures" Type="KhanawalModel.Store.ListingPictures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingPictures">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingRating_Listing">
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="1" />
+          <End Role="ListingRating" Type="KhanawalModel.Store.ListingRating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingRating">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingRequest_Listing">
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="0..1" />
+          <End Role="ListingRequest" Type="KhanawalModel.Store.ListingRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingRequest">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingRequest_User">
+          <End Role="User" Type="KhanawalModel.Store.User" Multiplicity="1" />
+          <End Role="ListingRequest" Type="KhanawalModel.Store.ListingRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="ListingRequest">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingTriedByUser_Listing">
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="1" />
+          <End Role="ListingTriedByUser" Type="KhanawalModel.Store.ListingTriedByUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingTriedByUser">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingTriedByUser_User">
+          <End Role="User" Type="KhanawalModel.Store.User" Multiplicity="1" />
+          <End Role="ListingTriedByUser" Type="KhanawalModel.Store.ListingTriedByUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="ListingTriedByUser">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MainMessage_ListingRequest">
+          <End Role="ListingRequest" Type="KhanawalModel.Store.ListingRequest" Multiplicity="1" />
+          <End Role="MainMessage" Type="KhanawalModel.Store.MainMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ListingRequest">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MainMessage">
+              <PropertyRef Name="ListingRequestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageThread_MainMessage">
+          <End Role="MainMessage" Type="KhanawalModel.Store.MainMessage" Multiplicity="1" />
+          <End Role="MessageThread" Type="KhanawalModel.Store.MessageThread" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MainMessage">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MessageThread">
+              <PropertyRef Name="MainMessageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageThread_User">
+          <End Role="User" Type="KhanawalModel.Store.User" Multiplicity="1" />
+          <End Role="MessageThread" Type="KhanawalModel.Store.MessageThread" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="MessageThread">
+              <PropertyRef Name="FromUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageThread_User1">
+          <End Role="User" Type="KhanawalModel.Store.User" Multiplicity="1" />
+          <End Role="MessageThread" Type="KhanawalModel.Store.MessageThread" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="MessageThread">
+              <PropertyRef Name="ToUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SideListingMapping_SideListings">
+          <End Role="SideListings" Type="KhanawalModel.Store.SideListings" Multiplicity="1" />
+          <End Role="SideListingMapping" Type="KhanawalModel.Store.SideListingMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SideListings">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SideListingMapping">
+              <PropertyRef Name="SideListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SideListings_Listing">
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="1" />
+          <End Role="SideListingMapping" Type="KhanawalModel.Store.SideListingMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SideListingMapping">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserCalendar_Listing">
+          <End Role="Listing" Type="KhanawalModel.Store.Listing" Multiplicity="0..1" />
+          <End Role="UserCalendar" Type="KhanawalModel.Store.UserCalendar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserCalendar">
+              <PropertyRef Name="ListingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserCalendar_User">
+          <End Role="User" Type="KhanawalModel.Store.User" Multiplicity="1" />
+          <End Role="UserCalendar" Type="KhanawalModel.Store.UserCalendar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserCalendar">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KhanawalModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="KhanawalEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AdHocRequests" EntityType="KhanawalModel.AdHocRequest" />
+          <EntitySet Name="AdHocRequestPickupLocations" EntityType="KhanawalModel.AdHocRequestPickupLocation" />
+          <EntitySet Name="AdHocRequestTasteMappings" EntityType="KhanawalModel.AdHocRequestTasteMapping" />
+          <EntitySet Name="AdHocRequestUserMappings" EntityType="KhanawalModel.AdHocRequestUserMapping" />
+          <EntitySet Name="Cities" EntityType="KhanawalModel.City" />
+          <EntitySet Name="Countries" EntityType="KhanawalModel.Country" />
+          <EntitySet Name="CuisineTypes" EntityType="KhanawalModel.CuisineType" />
+          <EntitySet Name="CurrencyTypes" EntityType="KhanawalModel.CurrencyType" />
+          <EntitySet Name="DeliveryTypes" EntityType="KhanawalModel.DeliveryType" />
+          <EntitySet Name="GeoIPCountries" EntityType="KhanawalModel.GeoIPCountry" />
+          <EntitySet Name="Ingredients" EntityType="KhanawalModel.Ingredient" />
+          <EntitySet Name="Languages" EntityType="KhanawalModel.Language" />
+          <EntitySet Name="LisitngReviews" EntityType="KhanawalModel.LisitngReview" />
+          <EntitySet Name="Listings" EntityType="KhanawalModel.Listing" />
+          <EntitySet Name="ListingAwards" EntityType="KhanawalModel.ListingAward" />
+          <EntitySet Name="ListingIngredients" EntityType="KhanawalModel.ListingIngredient" />
+          <EntitySet Name="ListingPictures" EntityType="KhanawalModel.ListingPicture" />
+          <EntitySet Name="ListingRatings" EntityType="KhanawalModel.ListingRating" />
+          <EntitySet Name="ListingRequests" EntityType="KhanawalModel.ListingRequest" />
+          <EntitySet Name="ListingTriedByUsers" EntityType="KhanawalModel.ListingTriedByUser" />
+          <EntitySet Name="Localizations" EntityType="KhanawalModel.Localization" />
+          <EntitySet Name="MainMessages" EntityType="KhanawalModel.MainMessage" />
+          <EntitySet Name="MessageThreads" EntityType="KhanawalModel.MessageThread" />
+          <EntitySet Name="RecipeTypes" EntityType="KhanawalModel.RecipeType" />
+          <EntitySet Name="SideListingMappings" EntityType="KhanawalModel.SideListingMapping" />
+          <EntitySet Name="SideListings" EntityType="KhanawalModel.SideListing" />
+          <EntitySet Name="States" EntityType="KhanawalModel.State" />
+          <EntitySet Name="Tastes" EntityType="KhanawalModel.Taste" />
+          <EntitySet Name="Users" EntityType="KhanawalModel.User" />
+          <EntitySet Name="UserCalendars" EntityType="KhanawalModel.UserCalendar" />
+          <EntitySet Name="UserRecommendations" EntityType="KhanawalModel.UserRecommendation" />
+          <EntitySet Name="UserWishLists" EntityType="KhanawalModel.UserWishList" />
+          <AssociationSet Name="FK_AdHocRequest_User" Association="KhanawalModel.FK_AdHocRequest_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="AdHocRequest" EntitySet="AdHocRequests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdHocRequestPickupLocation_AdHocRequest" Association="KhanawalModel.FK_AdHocRequestPickupLocation_AdHocRequest">
+            <End Role="AdHocRequest" EntitySet="AdHocRequests" />
+            <End Role="AdHocRequestPickupLocation" EntitySet="AdHocRequestPickupLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdHocRequestTasteMapping_AdHocRequest" Association="KhanawalModel.FK_AdHocRequestTasteMapping_AdHocRequest">
+            <End Role="AdHocRequest" EntitySet="AdHocRequests" />
+            <End Role="AdHocRequestTasteMapping" EntitySet="AdHocRequestTasteMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdHocRequestUserMapping_AdHocRequest" Association="KhanawalModel.FK_AdHocRequestUserMapping_AdHocRequest">
+            <End Role="AdHocRequest" EntitySet="AdHocRequests" />
+            <End Role="AdHocRequestUserMapping" EntitySet="AdHocRequestUserMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdHocRequestTasteMapping_Taste" Association="KhanawalModel.FK_AdHocRequestTasteMapping_Taste">
+            <End Role="Taste" EntitySet="Tastes" />
+            <End Role="AdHocRequestTasteMapping" EntitySet="AdHocRequestTasteMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdHocRequestUserMapping_User" Association="KhanawalModel.FK_AdHocRequestUserMapping_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="AdHocRequestUserMapping" EntitySet="AdHocRequestUserMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cities_States" Association="KhanawalModel.FK_Cities_States">
+            <End Role="States" EntitySet="States" />
+            <End Role="Cities" EntitySet="Cities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Country_CurrencyType" Association="KhanawalModel.FK_Country_CurrencyType">
+            <End Role="CurrencyType" EntitySet="CurrencyTypes" />
+            <End Role="Country" EntitySet="Countries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GeoIPCountry_Country" Association="KhanawalModel.FK_GeoIPCountry_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="GeoIPCountry" EntitySet="GeoIPCountries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Listing_CuisineType" Association="KhanawalModel.FK_Listing_CuisineType">
+            <End Role="CuisineType" EntitySet="CuisineTypes" />
+            <End Role="Listing" EntitySet="Listings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Listing_CurrencyType" Association="KhanawalModel.FK_Listing_CurrencyType">
+            <End Role="CurrencyType" EntitySet="CurrencyTypes" />
+            <End Role="Listing" EntitySet="Listings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingIngredients_Ingredients" Association="KhanawalModel.FK_ListingIngredients_Ingredients">
+            <End Role="Ingredients" EntitySet="Ingredients" />
+            <End Role="ListingIngredients" EntitySet="ListingIngredients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LisitngReviews_Listing" Association="KhanawalModel.FK_LisitngReviews_Listing">
+            <End Role="Listing" EntitySet="Listings" />
+            <End Role="LisitngReviews" EntitySet="LisitngReviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LisitngReviews_User" Association="KhanawalModel.FK_LisitngReviews_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="LisitngReviews" EntitySet="LisitngReviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Listing_RecipeType" Association="KhanawalModel.FK_Listing_RecipeType">
+            <End Role="RecipeType" EntitySet="RecipeTypes" />
+            <End Role="Listing" EntitySet="Listings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Listing_Taste" Association="KhanawalModel.FK_Listing_Taste">
+            <End Role="Taste" EntitySet="Tastes" />
+            <End Role="Listing" EntitySet="Listings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Listing_User" Association="KhanawalModel.FK_Listing_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Listing" EntitySet="Listings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingAwards_Listing" Association="KhanawalModel.FK_ListingAwards_Listing">
+            <End Role="Listing" EntitySet="Listings" />
+            <End Role="ListingAwards" EntitySet="ListingAwards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingIngredients_Listing" Association="KhanawalModel.FK_ListingIngredients_Listing">
+            <End Role="Listing" EntitySet="Listings" />
+            <End Role="ListingIngredients" EntitySet="ListingIngredients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingPictures_Listing" Association="KhanawalModel.FK_ListingPictures_Listing">
+            <End Role="Listing" EntitySet="Listings" />
+            <End Role="ListingPictures" EntitySet="ListingPictures" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingRating_Listing" Association="KhanawalModel.FK_ListingRating_Listing">
+            <End Role="Listing" EntitySet="Listings" />
+            <End Role="ListingRating" EntitySet="ListingRatings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingRequest_Listing" Association="KhanawalModel.FK_ListingRequest_Listing">
+            <End Role="Listing" EntitySet="Listings" />
+            <End Role="ListingRequest" EntitySet="ListingRequests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingTriedByUser_Listing" Association="KhanawalModel.FK_ListingTriedByUser_Listing">
+            <End Role="Listing" EntitySet="Listings" />
+            <End Role="ListingTriedByUser" EntitySet="ListingTriedByUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SideListings_Listing" Association="KhanawalModel.FK_SideListings_Listing">
+            <End Role="Listing" EntitySet="Listings" />
+            <End Role="SideListingMapping" EntitySet="SideListingMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCalendar_Listing" Association="KhanawalModel.FK_UserCalendar_Listing">
+            <End Role="Listing" EntitySet="Listings" />
+            <End Role="UserCalendar" EntitySet="UserCalendars" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingRequest_User" Association="KhanawalModel.FK_ListingRequest_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="ListingRequest" EntitySet="ListingRequests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MainMessage_ListingRequest" Association="KhanawalModel.FK_MainMessage_ListingRequest">
+            <End Role="ListingRequest" EntitySet="ListingRequests" />
+            <End Role="MainMessage" EntitySet="MainMessages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ListingTriedByUser_User" Association="KhanawalModel.FK_ListingTriedByUser_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="ListingTriedByUser" EntitySet="ListingTriedByUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageThread_MainMessage" Association="KhanawalModel.FK_MessageThread_MainMessage">
+            <End Role="MainMessage" EntitySet="MainMessages" />
+            <End Role="MessageThread" EntitySet="MessageThreads" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageThread_User" Association="KhanawalModel.FK_MessageThread_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="MessageThread" EntitySet="MessageThreads" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageThread_User1" Association="KhanawalModel.FK_MessageThread_User1">
+            <End Role="User" EntitySet="Users" />
+            <End Role="MessageThread" EntitySet="MessageThreads" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SideListingMapping_SideListings" Association="KhanawalModel.FK_SideListingMapping_SideListings">
+            <End Role="SideListings" EntitySet="SideListings" />
+            <End Role="SideListingMapping" EntitySet="SideListingMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCalendar_User" Association="KhanawalModel.FK_UserCalendar_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserCalendar" EntitySet="UserCalendars" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AdHocRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="SideDishesWanted" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="DeliveryTime" Type="DateTime" Nullable="false" />
+          <Property Name="IngredientsToAvoide" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="IsVeg" Type="Boolean" />
+          <Property Name="IsNonVeg" Type="Boolean" />
+          <Property Name="Cost" Type="Double" />
+          <Property Name="AdditionalInformaition" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="HomeDelivery" Type="Boolean" />
+          <NavigationProperty Name="User" Relationship="KhanawalModel.FK_AdHocRequest_User" FromRole="AdHocRequest" ToRole="User" />
+          <NavigationProperty Name="AdHocRequestPickupLocations" Relationship="KhanawalModel.FK_AdHocRequestPickupLocation_AdHocRequest" FromRole="AdHocRequest" ToRole="AdHocRequestPickupLocation" />
+          <NavigationProperty Name="AdHocRequestTasteMappings" Relationship="KhanawalModel.FK_AdHocRequestTasteMapping_AdHocRequest" FromRole="AdHocRequest" ToRole="AdHocRequestTasteMapping" />
+          <NavigationProperty Name="AdHocRequestUserMappings" Relationship="KhanawalModel.FK_AdHocRequestUserMapping_AdHocRequest" FromRole="AdHocRequest" ToRole="AdHocRequestUserMapping" />
+        </EntityType>
+        <EntityType Name="AdHocRequestPickupLocation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="AddRessLine1" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="AddRessLine2" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="PinCode" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="LandMark" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="AdHocRequestId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AdHocRequest" Relationship="KhanawalModel.FK_AdHocRequestPickupLocation_AdHocRequest" FromRole="AdHocRequestPickupLocation" ToRole="AdHocRequest" />
+        </EntityType>
+        <EntityType Name="AdHocRequestTasteMapping">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RequestID" Type="Int32" Nullable="false" />
+          <Property Name="TasteID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AdHocRequest" Relationship="KhanawalModel.FK_AdHocRequestTasteMapping_AdHocRequest" FromRole="AdHocRequestTasteMapping" ToRole="AdHocRequest" />
+          <NavigationProperty Name="Taste" Relationship="KhanawalModel.FK_AdHocRequestTasteMapping_Taste" FromRole="AdHocRequestTasteMapping" ToRole="Taste" />
+        </EntityType>
+        <EntityType Name="AdHocRequestUserMapping">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdhocRequestId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AdHocRequest" Relationship="KhanawalModel.FK_AdHocRequestUserMapping_AdHocRequest" FromRole="AdHocRequestUserMapping" ToRole="AdHocRequest" />
+          <NavigationProperty Name="User" Relationship="KhanawalModel.FK_AdHocRequestUserMapping_User" FromRole="AdHocRequestUserMapping" ToRole="User" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="city_id" />
+          </Key>
+          <Property Name="city_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="city_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="StateId" Type="Int32" />
+          <NavigationProperty Name="State" Relationship="KhanawalModel.FK_Cities_States" FromRole="Cities" ToRole="States" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Region" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CurrencyTypeId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CurrencyType" Relationship="KhanawalModel.FK_Country_CurrencyType" FromRole="Country" ToRole="CurrencyType" />
+          <NavigationProperty Name="GeoIPCountries" Relationship="KhanawalModel.FK_GeoIPCountry_Country" FromRole="Country" ToRole="GeoIPCountry" />
+        </EntityType>
+        <EntityType Name="CuisineType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Listings" Relationship="KhanawalModel.FK_Listing_CuisineType" FromRole="CuisineType" ToRole="Listing" />
+        </EntityType>
+        <EntityType Name="CurrencyType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Value" Type="Decimal" Precision="32" Scale="16" />
+          <NavigationProperty Name="Countries" Relationship="KhanawalModel.FK_Country_CurrencyType" FromRole="CurrencyType" ToRole="Country" />
+          <NavigationProperty Name="Listings" Relationship="KhanawalModel.FK_Listing_CurrencyType" FromRole="CurrencyType" ToRole="Listing" />
+        </EntityType>
+        <EntityType Name="DeliveryType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="GeoIPCountry">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IpFrom" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="IpTo" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="IpFromRange" Type="Double" />
+          <Property Name="IpToRange" Type="Double" />
+          <Property Name="CountryShortName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CountryName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryID" Type="Int32" />
+          <NavigationProperty Name="Country" Relationship="KhanawalModel.FK_GeoIPCountry_Country" FromRole="GeoIPCountry" ToRole="Country" />
+        </EntityType>
+        <EntityType Name="Ingredient">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Validated" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="3000" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="ListingIngredients" Relationship="KhanawalModel.FK_ListingIngredients_Ingredients" FromRole="Ingredients" ToRole="ListingIngredients" />
+        </EntityType>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Language1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="LisitngReview">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Review" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ListingID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="TasteRating" Type="Int32" />
+          <Property Name="QuantityRating" Type="Int32" />
+          <Property Name="VFMRating" Type="Int32" />
+          <Property Name="ServiceBehaviorRating" Type="Int32" />
+          <Property Name="OverAllRating" Type="Int32" />
+          <NavigationProperty Name="Listing" Relationship="KhanawalModel.FK_LisitngReviews_Listing" FromRole="LisitngReviews" ToRole="Listing" />
+          <NavigationProperty Name="User" Relationship="KhanawalModel.FK_LisitngReviews_User" FromRole="LisitngReviews" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Listing">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="VegOrNonVeg" Type="Boolean" Nullable="false" />
+          <Property Name="TasteID" Type="Int32" />
+          <Property Name="RecipeTypeID" Type="Int32" />
+          <Property Name="CuisineTypeID" Type="Int32" />
+          <Property Name="Servings" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Cost" Type="Double" />
+          <Property Name="CurrencyTypeID" Type="Int32" />
+          <Property Name="FreeHomedelivery" Type="Boolean" />
+          <Property Name="HomedeliveryCharges" Type="Int32" />
+          <Property Name="HomeAddressAsPickUpLocation" Type="Boolean" Nullable="false" />
+          <Property Name="AddressLang" Type="Double" />
+          <Property Name="AddressLat" Type="Double" />
+          <Property Name="CancellationType" Type="Int32" />
+          <Property Name="Rating" Type="Int32" />
+          <Property Name="ConformaitonMessageRequired" Type="Boolean" Nullable="false" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="HomeDelivery" Type="Boolean" Nullable="false" />
+          <Property Name="SideDishProvided" Type="Boolean" Nullable="false" />
+          <Property Name="Validated" Type="Boolean" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="3000" Unicode="false" FixedLength="false" />
+          <Property Name="Ingredients" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="AddressLine1" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="AddressLine2" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="PostalCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UserCity" Type="Int32" />
+          <Property Name="UserState" Type="Int32" />
+          <Property Name="IsPostalStyleSeleted" Type="Boolean" />
+          <Property Name="MainIngredient" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="FaceBookPostId" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ModifiedDate" Type="DateTime" />
+          <Property Name="SideListings" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CuisineType" Relationship="KhanawalModel.FK_Listing_CuisineType" FromRole="Listing" ToRole="CuisineType" />
+          <NavigationProperty Name="CurrencyType" Relationship="KhanawalModel.FK_Listing_CurrencyType" FromRole="Listing" ToRole="CurrencyType" />
+          <NavigationProperty Name="LisitngReviews" Relationship="KhanawalModel.FK_LisitngReviews_Listing" FromRole="Listing" ToRole="LisitngReviews" />
+          <NavigationProperty Name="RecipeType" Relationship="KhanawalModel.FK_Listing_RecipeType" FromRole="Listing" ToRole="RecipeType" />
+          <NavigationProperty Name="Taste" Relationship="KhanawalModel.FK_Listing_Taste" FromRole="Listing" ToRole="Taste" />
+          <NavigationProperty Name="User" Relationship="KhanawalModel.FK_Listing_User" FromRole="Listing" ToRole="User" />
+          <NavigationProperty Name="ListingAwards" Relationship="KhanawalModel.FK_ListingAwards_Listing" FromRole="Listing" ToRole="ListingAwards" />
+          <NavigationProperty Name="ListingIngredients" Relationship="KhanawalModel.FK_ListingIngredients_Listing" FromRole="Listing" ToRole="ListingIngredients" />
+          <NavigationProperty Name="ListingPictures" Relationship="KhanawalModel.FK_ListingPictures_Listing" FromRole="Listing" ToRole="ListingPictures" />
+          <NavigationProperty Name="ListingRatings" Relationship="KhanawalModel.FK_ListingRating_Listing" FromRole="Listing" ToRole="ListingRating" />
+          <NavigationProperty Name="ListingRequests" Relationship="KhanawalModel.FK_ListingRequest_Listing" FromRole="Listing" ToRole="ListingRequest" />
+          <NavigationProperty Name="ListingTriedByUsers" Relationship="KhanawalModel.FK_ListingTriedByUser_Listing" FromRole="Listing" ToRole="ListingTriedByUser" />
+          <NavigationProperty Name="SideListingMappings" Relationship="KhanawalModel.FK_SideListings_Listing" FromRole="Listing" ToRole="SideListingMapping" />
+          <NavigationProperty Name="UserCalendars" Relationship="KhanawalModel.FK_UserCalendar_Listing" FromRole="Listing" ToRole="UserCalendar" />
+        </EntityType>
+        <EntityType Name="ListingAward">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AwardID" Type="Int32" Nullable="false" />
+          <Property Name="ListingID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Listing" Relationship="KhanawalModel.FK_ListingAwards_Listing" FromRole="ListingAwards" ToRole="Listing" />
+        </EntityType>
+        <EntityType Name="ListingIngredient">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IngredientId" Type="Int32" Nullable="false" />
+          <Property Name="ListingId" Type="Int32" Nullable="false" />
+          <Property Name="IsMainIngredient" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Ingredient" Relationship="KhanawalModel.FK_ListingIngredients_Ingredients" FromRole="ListingIngredients" ToRole="Ingredients" />
+          <NavigationProperty Name="Listing" Relationship="KhanawalModel.FK_ListingIngredients_Listing" FromRole="ListingIngredients" ToRole="Listing" />
+        </EntityType>
+        <EntityType Name="ListingPicture">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DisplayImageUrl" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ListingID" Type="Int32" Nullable="false" />
+          <Property Name="ImageResolution" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FitForMainDisplaySlider" Type="Boolean" />
+          <Property Name="DisplayOrder" Type="Int32" />
+          <NavigationProperty Name="Listing" Relationship="KhanawalModel.FK_ListingPictures_Listing" FromRole="ListingPictures" ToRole="Listing" />
+        </EntityType>
+        <EntityType Name="ListingRating">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ListingID" Type="Int32" Nullable="false" />
+          <Property Name="Rating" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Listing" Relationship="KhanawalModel.FK_ListingRating_Listing" FromRole="ListingRating" ToRole="Listing" />
+        </EntityType>
+        <EntityType Name="ListingRequest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ListingID" Type="Int32" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="RequestedServings" Type="Int32" Nullable="false" />
+          <Property Name="RequestedDate" Type="DateTime" Nullable="false" />
+          <Property Name="IsConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="RequestAccepted" Type="Boolean" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Listing" Relationship="KhanawalModel.FK_ListingRequest_Listing" FromRole="ListingRequest" ToRole="Listing" />
+          <NavigationProperty Name="User" Relationship="KhanawalModel.FK_ListingRequest_User" FromRole="ListingRequest" ToRole="User" />
+          <NavigationProperty Name="MainMessages" Relationship="KhanawalModel.FK_MainMessage_ListingRequest" FromRole="ListingRequest" ToRole="MainMessage" />
+        </EntityType>
+        <EntityType Name="ListingTriedByUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ListingID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Listing" Relationship="KhanawalModel.FK_ListingTriedByUser_Listing" FromRole="ListingTriedByUser" ToRole="Listing" />
+          <NavigationProperty Name="User" Relationship="KhanawalModel.FK_ListingTriedByUser_User" FromRole="ListingTriedByUser" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Localization">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="language" Type="Int32" />
+          <Property Name="Description" Type="Int32" />
+        </EntityType>
+        <EntityType Name="MainMessage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="ListingRequestID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ListingRequest" Relationship="KhanawalModel.FK_MainMessage_ListingRequest" FromRole="MainMessage" ToRole="ListingRequest" />
+          <NavigationProperty Name="MessageThreads" Relationship="KhanawalModel.FK_MessageThread_MainMessage" FromRole="MainMessage" ToRole="MessageThread" />
+        </EntityType>
+        <EntityType Name="MessageThread">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Message" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="UserMessage" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="MessageReadRequestor" Type="Boolean" Nullable="false" />
+          <Property Name="MainMessageID" Type="Int32" Nullable="false" />
+          <Property Name="FromUserID" Type="Int32" Nullable="false" />
+          <Property Name="ToUserID" Type="Int32" Nullable="false" />
+          <Property Name="MessageDate" Type="DateTime" Nullable="false" />
+          <Property Name="IsFirstMessage" Type="Boolean" Nullable="false" />
+          <Property Name="ListingAccepted" Type="Boolean" />
+          <Property Name="MessageReadListingOwner" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="MainMessage" Relationship="KhanawalModel.FK_MessageThread_MainMessage" FromRole="MessageThread" ToRole="MainMessage" />
+          <NavigationProperty Name="User" Relationship="KhanawalModel.FK_MessageThread_User" FromRole="MessageThread" ToRole="User" />
+          <NavigationProperty Name="User1" Relationship="KhanawalModel.FK_MessageThread_User1" FromRole="MessageThread" ToRole="User" />
+        </EntityType>
+        <EntityType Name="RecipeType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Listings" Relationship="KhanawalModel.FK_Listing_RecipeType" FromRole="RecipeType" ToRole="Listing" />
+        </EntityType>
+        <EntityType Name="SideListingMapping">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ListingID" Type="Int32" Nullable="false" />
+          <Property Name="SideListingID" Type="Int32" Nullable="false" />
+          <Property Name="Validated" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Listing" Relationship="KhanawalModel.FK_SideListings_Listing" FromRole="SideListingMapping" ToRole="Listing" />
+          <NavigationProperty Name="SideListing" Relationship="KhanawalModel.FK_SideListingMapping_SideListings" FromRole="SideListingMapping" ToRole="SideListings" />
+        </EntityType>
+        <EntityType Name="SideListing">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="SideListingMappings" Relationship="KhanawalModel.FK_SideListingMapping_SideListings" FromRole="SideListings" ToRole="SideListingMapping" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cities" Relationship="KhanawalModel.FK_Cities_States" FromRole="States" ToRole="Cities" />
+        </EntityType>
+        <EntityType Name="Taste">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TasteDesc" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="AdHocRequestTasteMappings" Relationship="KhanawalModel.FK_AdHocRequestTasteMapping_Taste" FromRole="Taste" ToRole="AdHocRequestTasteMapping" />
+          <NavigationProperty Name="Listings" Relationship="KhanawalModel.FK_Listing_Taste" FromRole="Taste" ToRole="Listing" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ImageUrl" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="username" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="first_name" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="last_name" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="fb_id" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="gender" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="UserType" Type="Int32" />
+          <Property Name="JoinedDate" Type="DateTime" />
+          <Property Name="CityID" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="AddressLang" Type="Double" />
+          <Property Name="AddressLat" Type="Double" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="BirthDate" Type="DateTime" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreateFacebookPost" Type="Boolean" />
+          <Property Name="ReceiveSMS" Type="Boolean" />
+          <Property Name="AddressLine1" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="AddressLine2" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="UserCity" Type="Int32" />
+          <Property Name="UserState" Type="Int32" />
+          <Property Name="IsPostalStyleSeleted" Type="Boolean" />
+          <Property Name="PostalCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ServeAdHocRequest" Type="Boolean" />
+          <Property Name="ServeAdHocVeg" Type="Boolean" />
+          <Property Name="ServeAdHocNonVeg" Type="Boolean" />
+          <Property Name="PreferredCurrencyType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="AgreedTerms" Type="Boolean" />
+          <Property Name="ModifiedDate" Type="DateTime" />
+          <NavigationProperty Name="AdHocRequests" Relationship="KhanawalModel.FK_AdHocRequest_User" FromRole="User" ToRole="AdHocRequest" />
+          <NavigationProperty Name="AdHocRequestUserMappings" Relationship="KhanawalModel.FK_AdHocRequestUserMapping_User" FromRole="User" ToRole="AdHocRequestUserMapping" />
+          <NavigationProperty Name="LisitngReviews" Relationship="KhanawalModel.FK_LisitngReviews_User" FromRole="User" ToRole="LisitngReviews" />
+          <NavigationProperty Name="Listings" Relationship="KhanawalModel.FK_Listing_User" FromRole="User" ToRole="Listing" />
+          <NavigationProperty Name="ListingRequests" Relationship="KhanawalModel.FK_ListingRequest_User" FromRole="User" ToRole="ListingRequest" />
+          <NavigationProperty Name="ListingTriedByUsers" Relationship="KhanawalModel.FK_ListingTriedByUser_User" FromRole="User" ToRole="ListingTriedByUser" />
+          <NavigationProperty Name="MessageThreads" Relationship="KhanawalModel.FK_MessageThread_User" FromRole="User" ToRole="MessageThread" />
+          <NavigationProperty Name="MessageThreads1" Relationship="KhanawalModel.FK_MessageThread_User1" FromRole="User" ToRole="MessageThread" />
+          <NavigationProperty Name="UserCalendars" Relationship="KhanawalModel.FK_UserCalendar_User" FromRole="User" ToRole="UserCalendar" />
+        </EntityType>
+        <EntityType Name="UserCalendar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ListingId" Type="Int32" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="BusyDate" Type="DateTime" Nullable="false" />
+          <Property Name="FirstHalf" Type="Boolean" />
+          <Property Name="SecondHalf" Type="Boolean" />
+          <NavigationProperty Name="Listing" Relationship="KhanawalModel.FK_UserCalendar_Listing" FromRole="UserCalendar" ToRole="Listing" />
+          <NavigationProperty Name="User" Relationship="KhanawalModel.FK_UserCalendar_User" FromRole="UserCalendar" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserRecommendation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="ListingID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserWishList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ListngID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_AdHocRequest_User">
+          <End Role="User" Type="KhanawalModel.User" Multiplicity="0..1" />
+          <End Role="AdHocRequest" Type="KhanawalModel.AdHocRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="AdHocRequest">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdHocRequestPickupLocation_AdHocRequest">
+          <End Role="AdHocRequest" Type="KhanawalModel.AdHocRequest" Multiplicity="1" />
+          <End Role="AdHocRequestPickupLocation" Type="KhanawalModel.AdHocRequestPickupLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AdHocRequest">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AdHocRequestPickupLocation">
+              <PropertyRef Name="AdHocRequestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdHocRequestTasteMapping_AdHocRequest">
+          <End Role="AdHocRequest" Type="KhanawalModel.AdHocRequest" Multiplicity="1" />
+          <End Role="AdHocRequestTasteMapping" Type="KhanawalModel.AdHocRequestTasteMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AdHocRequest">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AdHocRequestTasteMapping">
+              <PropertyRef Name="RequestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdHocRequestUserMapping_AdHocRequest">
+          <End Role="AdHocRequest" Type="KhanawalModel.AdHocRequest" Multiplicity="1" />
+          <End Role="AdHocRequestUserMapping" Type="KhanawalModel.AdHocRequestUserMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AdHocRequest">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AdHocRequestUserMapping">
+              <PropertyRef Name="AdhocRequestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdHocRequestTasteMapping_Taste">
+          <End Role="Taste" Type="KhanawalModel.Taste" Multiplicity="1" />
+          <End Role="AdHocRequestTasteMapping" Type="KhanawalModel.AdHocRequestTasteMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Taste">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AdHocRequestTasteMapping">
+              <PropertyRef Name="TasteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdHocRequestUserMapping_User">
+          <End Role="User" Type="KhanawalModel.User" Multiplicity="1" />
+          <End Role="AdHocRequestUserMapping" Type="KhanawalModel.AdHocRequestUserMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="AdHocRequestUserMapping">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cities_States">
+          <End Role="States" Type="KhanawalModel.State" Multiplicity="0..1" />
+          <End Role="Cities" Type="KhanawalModel.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="States">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cities">
+              <PropertyRef Name="StateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Country_CurrencyType">
+          <End Role="CurrencyType" Type="KhanawalModel.CurrencyType" Multiplicity="1" />
+          <End Role="Country" Type="KhanawalModel.Country" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CurrencyType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Country">
+              <PropertyRef Name="CurrencyTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GeoIPCountry_Country">
+          <End Role="Country" Type="KhanawalModel.Country" Multiplicity="0..1" />
+          <End Role="GeoIPCountry" Type="KhanawalModel.GeoIPCountry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GeoIPCountry">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Listing_CuisineType">
+          <End Role="CuisineType" Type="KhanawalModel.CuisineType" Multiplicity="0..1" />
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CuisineType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Listing">
+              <PropertyRef Name="CuisineTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Listing_CurrencyType">
+          <End Role="CurrencyType" Type="KhanawalModel.CurrencyType" Multiplicity="0..1" />
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CurrencyType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Listing">
+              <PropertyRef Name="CurrencyTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingIngredients_Ingredients">
+          <End Role="Ingredients" Type="KhanawalModel.Ingredient" Multiplicity="1" />
+          <End Role="ListingIngredients" Type="KhanawalModel.ListingIngredient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ingredients">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingIngredients">
+              <PropertyRef Name="IngredientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LisitngReviews_Listing">
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="1" />
+          <End Role="LisitngReviews" Type="KhanawalModel.LisitngReview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LisitngReviews">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LisitngReviews_User">
+          <End Role="User" Type="KhanawalModel.User" Multiplicity="1" />
+          <End Role="LisitngReviews" Type="KhanawalModel.LisitngReview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="LisitngReviews">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Listing_RecipeType">
+          <End Role="RecipeType" Type="KhanawalModel.RecipeType" Multiplicity="0..1" />
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RecipeType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Listing">
+              <PropertyRef Name="RecipeTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Listing_Taste">
+          <End Role="Taste" Type="KhanawalModel.Taste" Multiplicity="0..1" />
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Taste">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Listing">
+              <PropertyRef Name="TasteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Listing_User">
+          <End Role="User" Type="KhanawalModel.User" Multiplicity="0..1" />
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Listing">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingAwards_Listing">
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="1" />
+          <End Role="ListingAwards" Type="KhanawalModel.ListingAward" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingAwards">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingIngredients_Listing">
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="1" />
+          <End Role="ListingIngredients" Type="KhanawalModel.ListingIngredient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingIngredients">
+              <PropertyRef Name="ListingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingPictures_Listing">
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="1" />
+          <End Role="ListingPictures" Type="KhanawalModel.ListingPicture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingPictures">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingRating_Listing">
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="1" />
+          <End Role="ListingRating" Type="KhanawalModel.ListingRating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingRating">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingRequest_Listing">
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="0..1" />
+          <End Role="ListingRequest" Type="KhanawalModel.ListingRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingRequest">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingTriedByUser_Listing">
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="1" />
+          <End Role="ListingTriedByUser" Type="KhanawalModel.ListingTriedByUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ListingTriedByUser">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SideListings_Listing">
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="1" />
+          <End Role="SideListingMapping" Type="KhanawalModel.SideListingMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SideListingMapping">
+              <PropertyRef Name="ListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserCalendar_Listing">
+          <End Role="Listing" Type="KhanawalModel.Listing" Multiplicity="0..1" />
+          <End Role="UserCalendar" Type="KhanawalModel.UserCalendar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listing">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserCalendar">
+              <PropertyRef Name="ListingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingRequest_User">
+          <End Role="User" Type="KhanawalModel.User" Multiplicity="1" />
+          <End Role="ListingRequest" Type="KhanawalModel.ListingRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="ListingRequest">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MainMessage_ListingRequest">
+          <End Role="ListingRequest" Type="KhanawalModel.ListingRequest" Multiplicity="1" />
+          <End Role="MainMessage" Type="KhanawalModel.MainMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ListingRequest">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MainMessage">
+              <PropertyRef Name="ListingRequestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ListingTriedByUser_User">
+          <End Role="User" Type="KhanawalModel.User" Multiplicity="1" />
+          <End Role="ListingTriedByUser" Type="KhanawalModel.ListingTriedByUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="ListingTriedByUser">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageThread_MainMessage">
+          <End Role="MainMessage" Type="KhanawalModel.MainMessage" Multiplicity="1" />
+          <End Role="MessageThread" Type="KhanawalModel.MessageThread" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MainMessage">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MessageThread">
+              <PropertyRef Name="MainMessageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageThread_User">
+          <End Role="User" Type="KhanawalModel.User" Multiplicity="1" />
+          <End Role="MessageThread" Type="KhanawalModel.MessageThread" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="MessageThread">
+              <PropertyRef Name="FromUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageThread_User1">
+          <End Role="User" Type="KhanawalModel.User" Multiplicity="1" />
+          <End Role="MessageThread" Type="KhanawalModel.MessageThread" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="MessageThread">
+              <PropertyRef Name="ToUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SideListingMapping_SideListings">
+          <End Role="SideListings" Type="KhanawalModel.SideListing" Multiplicity="1" />
+          <End Role="SideListingMapping" Type="KhanawalModel.SideListingMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SideListings">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SideListingMapping">
+              <PropertyRef Name="SideListingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserCalendar_User">
+          <End Role="User" Type="KhanawalModel.User" Multiplicity="1" />
+          <End Role="UserCalendar" Type="KhanawalModel.UserCalendar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserCalendar">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KhanawalModelStoreContainer" CdmEntityContainer="KhanawalEntities">
+          <EntitySetMapping Name="AdHocRequests"><EntityTypeMapping TypeName="KhanawalModel.AdHocRequest"><MappingFragment StoreEntitySet="AdHocRequest">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="SideDishesWanted" ColumnName="SideDishesWanted" />
+            <ScalarProperty Name="DeliveryTime" ColumnName="DeliveryTime" />
+            <ScalarProperty Name="IngredientsToAvoide" ColumnName="IngredientsToAvoide" />
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="IsVeg" ColumnName="IsVeg" />
+            <ScalarProperty Name="IsNonVeg" ColumnName="IsNonVeg" />
+            <ScalarProperty Name="Cost" ColumnName="Cost" />
+            <ScalarProperty Name="AdditionalInformaition" ColumnName="AdditionalInformaition" />
+            <ScalarProperty Name="HomeDelivery" ColumnName="HomeDelivery" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AdHocRequestPickupLocations"><EntityTypeMapping TypeName="KhanawalModel.AdHocRequestPickupLocation"><MappingFragment StoreEntitySet="AdHocRequestPickupLocation">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="AddRessLine1" ColumnName="AddRessLine1" />
+            <ScalarProperty Name="AddRessLine2" ColumnName="AddRessLine2" />
+            <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+            <ScalarProperty Name="City" ColumnName="City" />
+            <ScalarProperty Name="State" ColumnName="State" />
+            <ScalarProperty Name="Country" ColumnName="Country" />
+            <ScalarProperty Name="LandMark" ColumnName="LandMark" />
+            <ScalarProperty Name="AdHocRequestId" ColumnName="AdHocRequestId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AdHocRequestTasteMappings"><EntityTypeMapping TypeName="KhanawalModel.AdHocRequestTasteMapping"><MappingFragment StoreEntitySet="AdHocRequestTasteMapping">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+            <ScalarProperty Name="TasteID" ColumnName="TasteID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AdHocRequestUserMappings"><EntityTypeMapping TypeName="KhanawalModel.AdHocRequestUserMapping"><MappingFragment StoreEntitySet="AdHocRequestUserMapping">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="AdhocRequestId" ColumnName="AdhocRequestId" />
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Cities"><EntityTypeMapping TypeName="KhanawalModel.City"><MappingFragment StoreEntitySet="Cities">
+            <ScalarProperty Name="city_id" ColumnName="city_id" />
+            <ScalarProperty Name="city_name" ColumnName="city_name" />
+            <ScalarProperty Name="StateId" ColumnName="StateId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Countries"><EntityTypeMapping TypeName="KhanawalModel.Country"><MappingFragment StoreEntitySet="Country">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Region" ColumnName="Region" />
+            <ScalarProperty Name="CurrencyTypeId" ColumnName="CurrencyTypeId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CuisineTypes"><EntityTypeMapping TypeName="KhanawalModel.CuisineType"><MappingFragment StoreEntitySet="CuisineType">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CurrencyTypes"><EntityTypeMapping TypeName="KhanawalModel.CurrencyType"><MappingFragment StoreEntitySet="CurrencyType">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Value" ColumnName="Value" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DeliveryTypes"><EntityTypeMapping TypeName="KhanawalModel.DeliveryType"><MappingFragment StoreEntitySet="DeliveryType">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="GeoIPCountries"><EntityTypeMapping TypeName="KhanawalModel.GeoIPCountry"><MappingFragment StoreEntitySet="GeoIPCountry">
+            <ScalarProperty Name="IpFrom" ColumnName="IpFrom" />
+            <ScalarProperty Name="IpTo" ColumnName="IpTo" />
+            <ScalarProperty Name="IpFromRange" ColumnName="IpFromRange" />
+            <ScalarProperty Name="IpToRange" ColumnName="IpToRange" />
+            <ScalarProperty Name="CountryShortName" ColumnName="CountryShortName" />
+            <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Ingredients"><EntityTypeMapping TypeName="KhanawalModel.Ingredient"><MappingFragment StoreEntitySet="Ingredients">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Validated" ColumnName="Validated" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Languages"><EntityTypeMapping TypeName="KhanawalModel.Language"><MappingFragment StoreEntitySet="Languages">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Language1" ColumnName="Language" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LisitngReviews"><EntityTypeMapping TypeName="KhanawalModel.LisitngReview"><MappingFragment StoreEntitySet="LisitngReviews">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Review" ColumnName="Review" />
+            <ScalarProperty Name="ListingID" ColumnName="ListingID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="TasteRating" ColumnName="TasteRating" />
+            <ScalarProperty Name="QuantityRating" ColumnName="QuantityRating" />
+            <ScalarProperty Name="VFMRating" ColumnName="VFMRating" />
+            <ScalarProperty Name="ServiceBehaviorRating" ColumnName="ServiceBehaviorRating" />
+            <ScalarProperty Name="OverAllRating" ColumnName="OverAllRating" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Listings"><EntityTypeMapping TypeName="KhanawalModel.Listing"><MappingFragment StoreEntitySet="Listing">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="VegOrNonVeg" ColumnName="VegOrNonVeg" />
+            <ScalarProperty Name="TasteID" ColumnName="TasteID" />
+            <ScalarProperty Name="RecipeTypeID" ColumnName="RecipeTypeID" />
+            <ScalarProperty Name="CuisineTypeID" ColumnName="CuisineTypeID" />
+            <ScalarProperty Name="Servings" ColumnName="Servings" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Cost" ColumnName="Cost" />
+            <ScalarProperty Name="CurrencyTypeID" ColumnName="CurrencyTypeID" />
+            <ScalarProperty Name="FreeHomedelivery" ColumnName="FreeHomedelivery" />
+            <ScalarProperty Name="HomedeliveryCharges" ColumnName="HomedeliveryCharges" />
+            <ScalarProperty Name="HomeAddressAsPickUpLocation" ColumnName="HomeAddressAsPickUpLocation" />
+            <ScalarProperty Name="AddressLang" ColumnName="AddressLang" />
+            <ScalarProperty Name="AddressLat" ColumnName="AddressLat" />
+            <ScalarProperty Name="CancellationType" ColumnName="CancellationType" />
+            <ScalarProperty Name="Rating" ColumnName="Rating" />
+            <ScalarProperty Name="ConformaitonMessageRequired" ColumnName="ConformaitonMessageRequired" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="HomeDelivery" ColumnName="HomeDelivery" />
+            <ScalarProperty Name="SideDishProvided" ColumnName="SideDishProvided" />
+            <ScalarProperty Name="Validated" ColumnName="Validated" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="Ingredients" ColumnName="Ingredients" />
+            <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+            <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+            <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+            <ScalarProperty Name="UserCity" ColumnName="UserCity" />
+            <ScalarProperty Name="UserState" ColumnName="UserState" />
+            <ScalarProperty Name="IsPostalStyleSeleted" ColumnName="IsPostalStyleSeleted" />
+            <ScalarProperty Name="MainIngredient" ColumnName="MainIngredient" />
+            <ScalarProperty Name="FaceBookPostId" ColumnName="FaceBookPostId" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+            <ScalarProperty Name="SideListings" ColumnName="SideListings" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ListingAwards"><EntityTypeMapping TypeName="KhanawalModel.ListingAward"><MappingFragment StoreEntitySet="ListingAwards">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="AwardID" ColumnName="AwardID" />
+            <ScalarProperty Name="ListingID" ColumnName="ListingID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ListingIngredients"><EntityTypeMapping TypeName="KhanawalModel.ListingIngredient"><MappingFragment StoreEntitySet="ListingIngredients">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="IngredientId" ColumnName="IngredientId" />
+            <ScalarProperty Name="ListingId" ColumnName="ListingId" />
+            <ScalarProperty Name="IsMainIngredient" ColumnName="IsMainIngredient" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ListingPictures"><EntityTypeMapping TypeName="KhanawalModel.ListingPicture"><MappingFragment StoreEntitySet="ListingPictures">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="DisplayImageUrl" ColumnName="DisplayImageUrl" />
+            <ScalarProperty Name="ListingID" ColumnName="ListingID" />
+            <ScalarProperty Name="ImageResolution" ColumnName="ImageResolution" />
+            <ScalarProperty Name="FitForMainDisplaySlider" ColumnName="FitForMainDisplaySlider" />
+            <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ListingRatings"><EntityTypeMapping TypeName="KhanawalModel.ListingRating"><MappingFragment StoreEntitySet="ListingRating">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ListingID" ColumnName="ListingID" />
+            <ScalarProperty Name="Rating" ColumnName="Rating" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ListingRequests"><EntityTypeMapping TypeName="KhanawalModel.ListingRequest"><MappingFragment StoreEntitySet="ListingRequest">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ListingID" ColumnName="ListingID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="RequestedServings" ColumnName="RequestedServings" />
+            <ScalarProperty Name="RequestedDate" ColumnName="RequestedDate" />
+            <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+            <ScalarProperty Name="RequestAccepted" ColumnName="RequestAccepted" />
+            <ScalarProperty Name="Message" ColumnName="Message" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ListingTriedByUsers"><EntityTypeMapping TypeName="KhanawalModel.ListingTriedByUser"><MappingFragment StoreEntitySet="ListingTriedByUser">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ListingID" ColumnName="ListingID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Localizations"><EntityTypeMapping TypeName="KhanawalModel.Localization"><MappingFragment StoreEntitySet="Localization">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="language" ColumnName="language" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MainMessages"><EntityTypeMapping TypeName="KhanawalModel.MainMessage"><MappingFragment StoreEntitySet="MainMessage">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+            <ScalarProperty Name="ListingRequestID" ColumnName="ListingRequestID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MessageThreads"><EntityTypeMapping TypeName="KhanawalModel.MessageThread"><MappingFragment StoreEntitySet="MessageThread">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Message" ColumnName="Message" />
+            <ScalarProperty Name="UserMessage" ColumnName="UserMessage" />
+            <ScalarProperty Name="MessageReadRequestor" ColumnName="MessageReadRequestor" />
+            <ScalarProperty Name="MainMessageID" ColumnName="MainMessageID" />
+            <ScalarProperty Name="FromUserID" ColumnName="FromUserID" />
+            <ScalarProperty Name="ToUserID" ColumnName="ToUserID" />
+            <ScalarProperty Name="MessageDate" ColumnName="MessageDate" />
+            <ScalarProperty Name="IsFirstMessage" ColumnName="IsFirstMessage" />
+            <ScalarProperty Name="ListingAccepted" ColumnName="ListingAccepted" />
+            <ScalarProperty Name="MessageReadListingOwner" ColumnName="MessageReadListingOwner" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="RecipeTypes"><EntityTypeMapping TypeName="KhanawalModel.RecipeType"><MappingFragment StoreEntitySet="RecipeType">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SideListingMappings"><EntityTypeMapping TypeName="KhanawalModel.SideListingMapping"><MappingFragment StoreEntitySet="SideListingMapping">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ListingID" ColumnName="ListingID" />
+            <ScalarProperty Name="SideListingID" ColumnName="SideListingID" />
+            <ScalarProperty Name="Validated" ColumnName="Validated" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SideListings"><EntityTypeMapping TypeName="KhanawalModel.SideListing"><MappingFragment StoreEntitySet="SideListings">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="States"><EntityTypeMapping TypeName="KhanawalModel.State"><MappingFragment StoreEntitySet="States">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tastes"><EntityTypeMapping TypeName="KhanawalModel.Taste"><MappingFragment StoreEntitySet="Taste">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="TasteDesc" ColumnName="TasteDesc" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Users"><EntityTypeMapping TypeName="KhanawalModel.User"><MappingFragment StoreEntitySet="User">
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="email" ColumnName="email" />
+            <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+            <ScalarProperty Name="username" ColumnName="username" />
+            <ScalarProperty Name="first_name" ColumnName="first_name" />
+            <ScalarProperty Name="last_name" ColumnName="last_name" />
+            <ScalarProperty Name="fb_id" ColumnName="fb_id" />
+            <ScalarProperty Name="gender" ColumnName="gender" />
+            <ScalarProperty Name="UserType" ColumnName="UserType" />
+            <ScalarProperty Name="JoinedDate" ColumnName="JoinedDate" />
+            <ScalarProperty Name="CityID" ColumnName="CityID" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="AddressLang" ColumnName="AddressLang" />
+            <ScalarProperty Name="AddressLat" ColumnName="AddressLat" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+            <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+            <ScalarProperty Name="CreateFacebookPost" ColumnName="CreateFacebookPost" />
+            <ScalarProperty Name="ReceiveSMS" ColumnName="ReceiveSMS" />
+            <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+            <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+            <ScalarProperty Name="UserCity" ColumnName="UserCity" />
+            <ScalarProperty Name="UserState" ColumnName="UserState" />
+            <ScalarProperty Name="IsPostalStyleSeleted" ColumnName="IsPostalStyleSeleted" />
+            <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+            <ScalarProperty Name="ServeAdHocRequest" ColumnName="ServeAdHocRequest" />
+            <ScalarProperty Name="ServeAdHocVeg" ColumnName="ServeAdHocVeg" />
+            <ScalarProperty Name="ServeAdHocNonVeg" ColumnName="ServeAdHocNonVeg" />
+            <ScalarProperty Name="PreferredCurrencyType" ColumnName="PreferredCurrencyType" />
+            <ScalarProperty Name="AgreedTerms" ColumnName="AgreedTerms" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UserCalendars"><EntityTypeMapping TypeName="KhanawalModel.UserCalendar"><MappingFragment StoreEntitySet="UserCalendar">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ListingId" ColumnName="ListingId" />
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="BusyDate" ColumnName="BusyDate" />
+            <ScalarProperty Name="FirstHalf" ColumnName="FirstHalf" />
+            <ScalarProperty Name="SecondHalf" ColumnName="SecondHalf" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UserRecommendations"><EntityTypeMapping TypeName="KhanawalModel.UserRecommendation"><MappingFragment StoreEntitySet="UserRecommendation">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="ListingID" ColumnName="ListingID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UserWishLists"><EntityTypeMapping TypeName="KhanawalModel.UserWishList"><MappingFragment StoreEntitySet="UserWishList">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ListngID" ColumnName="ListngID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

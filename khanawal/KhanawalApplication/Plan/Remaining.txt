@@ -1,0 +1,130 @@
+﻿--------------------------------
+1)User DashBoard --- Done
+Own DashBoard -  Done
+Others DashBoard 
+-------------------------------
+ 2)Calender update when the user approves any request
+ request reject 
+ ---------------------------------------------
+ 3)Listing Image remove ---- High - Done
+ ----------------------------------------
+ 4)Listing Edit page ---- High - Almost done
+ ----------------------------------------
+ 5)Allow user to add his listing without logging in -  need to work on facebook thing..listing save is set up
+ ------------------------------------------------
+ 6)Similar listing -   
+ ---------------------------------------------------
+ 7)Other listing from  the same user 
+ ------------------------------------------------
+ 8)All user listings
+ ---------------------------------
+ 9)User requested Lisitng
+ -----------------------------------------------
+ 10)Edit profile 
+ --   ----------------------------------------------
+11)Improve the listing add screen --- Imgae upload things needs to be changed [reorder image]..also the 
+---------------------------------------------------
+12)Calendar update 
+-----------------------------------------------------------------------------------
+13) user dishplay name
+-----------------------------------------------------------------------------------------------------------
+
+
+1) Cycle 1 
+	a) create a new user
+	b) create a listing.
+2) Cycle 2
+	a) create a new user
+	b) request a listing
+	c) send message related to the listing.
+3) Cycle 3
+	a) request a listing
+	b) approve listing
+4) Cycle 4
+	a) request a listing
+	b) reject listing.
+
+
+
+
+
+ListingDetails.aspx
+1) When the one user confirms that one perticular dish then --then that dish is termed as dish served.when
+order is rejected or cancelled. then it should be removed from there.
+2) Famous dish if any  -- the dish which other users have ordered most.
+3) Even the user is logged in buttons are in disabled state.
+
+--------------------------------------------------------------------------------
+
+Complete cycle for request and accpetance
+
+1)  send the request --Mail -- redirection -- login -- 1 hr mins
+2)  the owner replys for some information -- Mail --- 30 mins
+3)  reply again with information -- Mail -- 30 mins
+4)  Owner accepts the request --- Mail - 45 mins
+5)  Mails in each occesion.
+
+3 hours --- 4 hours --- 
+
+
+1) send the request
+2) owner rejects.
+3) Mails for each occasion
+--------------------------------
+2 hours
+
+1) Send the request
+2) owners accept
+3) Mails for each step.
+---------------------------
+1 hour
+
+** When some one sends the request and owner desides the change the price.
+** when some one sends the request and owner desides to hide/delete the request.
+
+
+
+
+--------------------------------------------------------------------------------------------
+
+1) Registration page -- Email -- 1 hr 
+2) Send mail to user who is requesting --order -- 1 hr
+3) Send mail to both the users when the request is confirmed. 1 hr
+4) when the listing is visible send the email to user. -- 1 hr
+5) when user listing is listed then send mail -- 1 hr
+6) facebook application cancel button -- not sure ..needs RND
+7) DashBoard image -- is hardcoded -- 10 mins
+9) sub ingredients add -- wo description - wrong error message--also after save all the values are getting 
+lost need to convert it into the ajax thing with a message div -- 2 hours
+10) Location and pricing some problem while saving the data 2 hours
+
+-----------------------------------------------------------------------------------
+
+feels good to see the death very close...now i know how people when dying...
+
+-----------------------------------------------------------------------------------
+Acidity is on peak..
+
+I plan to cover most of the remaining work in this 5 days. lets see how health supports the same.
+
+what is a life...actually now i,m doing this website for finacial freedom..to get ejected from the job cycle.
+
+lets see how far i can take it.
+------------------------------------------------------------------------------------------------
+Todays Task.
+1) when he image is not present show the default image in image listing page.
+2) Dish served count logic.
+3) CSS for the dish served.
+4) Other listing when the image is not present then show the default image.
+----------------------------------------------------------------------------------------------------------
+
+ha ha ha..
+
+funny how one has to go through the life time.
+
+acidity is not going..
+
+danger or cancer make my mind canerous..
+
+I dont have proper job in my hand..what else a man can expect..wonderfull..
+

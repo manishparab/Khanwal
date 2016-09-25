@@ -1,0 +1,4 @@
+﻿MSSQL database management
+Host Name	mssql1002.ixwebhosting.com 
+Database name	C305050_Khanawal   
+Database login	C305050_Manish

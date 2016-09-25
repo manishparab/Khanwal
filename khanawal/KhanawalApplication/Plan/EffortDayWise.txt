@@ -1,0 +1,368 @@
+﻿---------------------------------
+3/2/2013 - This is how my sundays looks
+
+1) Inbox main page with a DB check --30 mins -- 1 to 1.30
+2) Inbox main page grid with redirection to inbox thread -- 60 mins - 4 to 5 --- lol -- completed till this only
+3) Main Thread with approve button in it and when should approve button appear and when should it disapper. - 120 mins - 5 to 7
+4) Reply to the main thread. 120 mins -  7 to  9
+5) Mails for each surcumstances. - 120 mins 11 to 1
+6) Rejection senario- 1 to 3
+------------------------------------------
+
+4/2/2013 - Monday- Medical leave office
+
+Message therad -  I will not get up till this is done.
+
+	[	1) Decide when to show confirm button 
+		2) Rendering of all messages
+		3) reply to and fro
+	]
+	4) mails -- not imp now
+
+	display:<%# (bool)Eval("FirstRecord")?"block":"none"%>
+	
+	fuck yeah..fuck yeah...wow..wish i had such days..wow..
+
+-----------------------------------------------------------------------------------------
+5/2/2013 
+Nothing much done -except fighting with wife -- no one cares abt my work..
+completed the bolding of message if unread.
+-----------------------------------------------------------------------------------------------
+6/2/2013
+
+The Top navigation menu --working on it - i will study for interview after i go home for interview
+http://cameronspear.com/demos/twitter-bootstrap-hover-dropdown/
+----------------------------------------------------------------------------------------------------
+Too late for what?
+
+If you slept through your 26th birthday, it's too late for you to experience it. 
+It's too late for you to watch "LOST" in its premiere broadcast. (Though, honestly, you didn't miss much.)
+It's too late for you to fight in the Vietnam War. 
+It's too late for you to go through puberty or attend nursery school. 
+It's too late for you to learn a second language as proficiently as a native speaker. 
+It's probably too late for you to be breastfed.
+
+It's not too late for you to fall in love.
+It's not too late for you to have kids.
+It's not too late for you to embark on an exciting career or series of careers.
+It's not too late for you to read the complete works of Shakespeare; learn how to program computers; learn to dance; travel around the world; go to therapy; become an accomplished cook; sky dive; develop an appreciation for jazz; write a novel; get an advanced degree; save for your old age; read "In Search of Lost Time"; become a Christian, then an atheist, then a Scientologist; break a few bones; learn how to fix a toilet; develop a six-pack ...
+
+Honestly, I'm 47, and I'll say this to you, whippersnapper: you're a fucking kid, so get over yourself. I'm a fucking kid, too. I'm almost twice your age, and I'm just getting started! My dad is in his 80s, and he wrote two books last year.
+
+You don't get to use age as an excuse. Get off your ass!
+
+Also, learn about what economists call "sunk costs." If I give someone $100 on Monday, and he spends $50 on candy, he'll probably regret that purchase on Tuesday. In a way, he'll still think of himself as a guy with $100 -- half of which is wasted.
+
+What he really is is a guy with $50, just as he would be if I'd handed him a fifty-dollar bill. A sunk cost from yesterday should not be part of today's equation. What he should be thinking is this: "What should I do with my $50?"
+
+What you are isn't a person who has wasted 27 years. You are a person who has X number of years ahead of you. What are you going to do with them?
+---------------------------------------------------------------------------------------------
+
+7/2/2013
+
+Today gave interview-- mind is completely fucked off, not able to concentrate on anything..but this site is everything
+
+this can give me a life which i have dreamed..so fucking need to complete below task.
+
+dont getup untill you finish applying masterpage to all the page
+
+1) Todays Work -  Apply master page to the all the pages
+2) FaceBook Connect - set up the facebook application
+				    - Same Authentication code like HIfi
+					- we need to show logged in user.
+--------------------------------------------------------------------------------------------------------------
+8/2/2013
+
+fucking wasted..not a single line of code..
+
+i think i have to go back to india ...but i dont want to do that..so little frustrated.
+-----------------------------------------------------------------------------------------------------
+9/2/2013
+
+I have planned my day as below...i have to do it..or i will be screwed
+
+there are two main activities.
+
+1) work on this site
+2) develope Interview skills
+
+1) i have to be done with the facebook connect thing..UP and Running
+2) atleast learn few things about sharepoint new
+
+1) Single page for handeling authentication - 3.30
+2) return setting URL javascript. 3.50
+3) Actual Authentication - 5
+4) Break - 5.30
+5) Varification in DB for logged in USER - 6.30
+6) Update the Top navigation for logged in User - 7.30
+7) break go out to sentosa
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+8) Design for the DashBord - 10 to 12
+9) Twitter authentication 12 to 3
+
+Working on the Task 8 and 9
+
+Talked to shilpa about having baby..she is having some tension regarding having a baby.
+but i think it will be all fine..:)..All is well...
+
+job search is going slow..may be i should concentrate more on this.Site is taking my whole day..but its something which is
+totally mine..super like :)
+
+totally motivated now..i want to sell this site for 40 Mn USD
+-------------------------------------------------------------------------------------------------------------------
+10/2/2013
+
+DashBoard main page with submenu	10/2/2013 --- complete this with 12.30
+
+DashBoard almost completed
+------------------------------------------------------------------------------------------------
+
+11/2/2013
+
+Task 1 )  6.30 to 8.30  new listing page modification.
+Task 2)   8.30 to 9.30  resume modification
+Task 3)  10.30 to 3     listings page edit 
+-------------------------------------------------------------------------------------------------
+15/2/2013
+
+select 2 place holder and the first option without value.
+
+raising vernture capital [need to prepare for the PPT presentation]
+http://www.quicksprout.com/2009/01/21/how-to-raise-venture-capital/
+
+Manager caught me while playing Table Tennis.
+She was very furious about it..I know my contact extension is in danger now.
+
+Arun told me below things which i feel are totally important to know and follow.
+
+1) keep 100% self trust.
+2) you know what you are..you have reached here because of something. so dont worry..remember the history 
+and see the things which you have achived.
+3) Technical and functional are two kinds of people which are standing under one umbrella, one just talks and other
+does all the work..and this world the one who does all the talking takes the benifits..he dose't have the technical knowledge
+but if i learn to talk then no one can beat me
+4) There will be always negative things in life.so just keep them aside.
+5) Dont be the best but be good..dont be worst but be bad.
+
+---------------------------------------------------------------------------------------------------
+16/2/2013
+http://www.imghut.com/image/charles-bukowski-quote-5128.html 
+
+---------------------------------------------------------------------------------------
+
+Today : Sunday :  17/2/2013
+
+1) UI
+	a) button  30 mins
+	b) grid    3 hours
+2)Actual Implementaion
+	a) Upload   3 hours
+	b) Delete   2 hours  
+----------------------------------
+3) Manage Photo
+	a) UI
+		a) jquey Reorder grid  3 hours
+		b) Option to delete the pics 2 hours	
+	b) Actual implementation
+		a) save the order to the DB 4 hours
+		b) delete the pictures 4 hours
+
+-------------------------------------------------------------------------------------------------------
+
+Today : Monday :  18/2/2013
+
+http://stackoverflow.com/questions/2850961/jquery-ui-sortable-get-the-item-being-sorted
+
+Today i will try to finish Manage Photo
+
+3) Manage Photo
+	a) UI
+		a) jquey Reorder grid  3 hours
+		b) Option to delete the pics 2 hours	
+	b) Actual implementation
+		a) save the order to the DB 4 hours
+		b) delete the pictures 4 hours
+
+for checking the extended permisions for application
+https://developers.facebook.com/tools/explorer/
+
+
+------------------------------------------------------------------------------------------------------------
+Today : Tuesday : 19/2/2013
+
+learned to pass jquery objects to c#
+
+ <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+<script type="text/javascript">
+        var CodeObject = [];
+        var myString;
+        $(function () {
+            
+            var objCode = new Object();
+            objCode.Code = "1";
+            objCode.Value = "1";
+            CodeObject.push(objCode);
+
+            objCode = new Object();
+            objCode.Code = "2";
+            objCode.Value = "2";
+            CodeObject.push(objCode);
+            
+            myString = JSON.stringify(CodeObject);
+
+            alert(myString);
+        });
+        
+
+        function postDataCustom() {
+            $.ajax({
+                type: "POST",
+                url: "Default2.aspx/SaveOrderInDb",
+                data: "{codeObjects: " + myString + "}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    alert('success');
+                },
+                error: function (msg) {
+                    debugger;
+                    alert('fail');
+                }
+            });
+        }
+    </script>
+
+on c# side
+
+ [WebMethod]
+ public static void SaveOrderInDb(List<CodeObject> codeObjects )
+ {
+            
+ }
+
+public class CodeObject
+{
+        public string Code { get; set; }
+        public string Value { get; set; }
+ }
+
+
+ http://docs.jquery.com/UI/Effects/Highlight
+
+ REMAINING ---- TYPEAHADE in the main page... 
+
+------------------------------------------------------------------------------------------------------------
+Today : Wed  : 20/2/2013
+
+1) Avoid same picture name upload
+2) Create Edit profile page
+	a) Modify the DB for user table
+	b) Get data from facebook
+	c) Edit form design
+3) create the view profile page
+	a) form design 
+
+
+Make the date picker select the values which are greter than current date.
+http://www.eyecon.ro/bootstrap-datepicker/
+
+--------------------------------------------------------------------------------------------------------------- 
+
+Today : fri  : 22/2/2013
+
+Once I complete this project.
+
+I,m going to get this watch for me..I like it so much :)
+http://titanworld.com/sg/watches/products/?id=17
+
+to want to finish the profile thing.
+
+below are the list of things which are pending
+
+Edit profile - proper location -- before sleep
+
+View profile - Tommrow
+
+Edit listing -  1) User location - sunday
+				2) Other options - sunday	
+
+Other Listings -  Monday
+
+All listings from same user Monday
+
+Calendar update - it will take atleast 4 to 5 days
+
+------------------------------------------------------------------------
+Today : sat  : 23/2/2013
+------------------------------------------------------------------------
+Today : sunday : 24/2/2013
+
+Totally depressed
+-----------------------------------------------------------------------
+Today: Mon --25/2/2013
+
+shilpa not feeling well
+
+not much done today
+
+if we dont add below line the page css is getting distored.
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+Other Listing -- Hide if not present 
+Similar listing -- Hide if not present
+Total Dishes  -- Add
+Dish Serverd  -- Hide if not present
+Famous Dish -- Hide if not present
+
+firefox checking has to be done.
+
+----------------------------------------------------------------------------------------------
+
+IMBD - Similar for Athelets
+
+
+----------------------------------------------------------------------------------------------
+30/3/2013
+
+Now seriously this is a bug break.
+
+I was in job hunt...fucking bad days...really bad man...should not have such days.
+
+they are playing a game with me..and there is no one to help me out of this game.
+
+just for 5 days i,m getting played.
+
+where they are going to repend on this I dont know...i should finish my work there and join the new job.
+
+by the way I have two job offers and not sure which one to join..both are permanent and yes both are big..
+
+so congratulations..
+
+now coming back to project.
+
+I should try to plan today which are the things which are pending and when they can be completed.
+
+---------------------------------------------------------------------------------------------------
+7/4/2013
+
+was very busy in project and I took some break.so not much work done during these 7 days.
+
+Tommrows plan..try to stabilize all the pages.
+---------------------------------------------------------------------------------------------------
+24/4/2013
+
+Job is fucked up
+
+a) when there is only one image which is big then can not see the listing
+b) pricing and location data saved but when again we go back then we get the error.
+
+----------------------------------------------------------------------------------
+Basic profile link not working properly.
+While adding the dish..when the user is already connected still the button caption is saying connect to facebook and then save.
+Recipe type extra option..http://localhost:51182/ListingNewCatIngredients.aspx?Id=45 [add type snaks]
+
+--------------------------------------------------------------------------------------
+
+<meta property="og:image" content="http://khanawal.com/Capture/Images/HomePage/HomeCooked_India_food.jpg">
